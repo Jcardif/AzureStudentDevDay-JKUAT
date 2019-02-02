@@ -23,7 +23,7 @@ model.add(Dense(1,kernel_initializer='normal',activation='relu'))
 model.compile(loss='mean_squared_error', optimizer='adam',metrics=['mean_absolute_percentage_error'])
 
 #Train the Model
-model.fit(x_train,y_train, batch_size=32, epochs=3,validation_data=(x_val,y_val))
+model.fit(x_train,y_train, batch_size=32, epochs=100000,validation_data=(x_val,y_val))
 
 #Evaluate the model
 results=model.evaluate(x_test,y_test)
